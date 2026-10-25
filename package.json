@@ -1,0 +1,17 @@
+{
+  "name": "dr-munna-assist-ai",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Recovered Android WebView/Capacitor project for Dr. Munna Assist AI",
+  "scripts": {
+    "copy-web": "node scripts-copy-web.cjs",
+    "android:sync": "npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3"
+  }
+}

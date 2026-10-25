@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: dr-munna-assist-ai-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install --omit=dev --no-audit --no-fund
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: APP_API_TOKEN
+        generateValue: true
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: GEMINI_IMAGE_MODEL
+        value: gemini-2.5-flash-image
+      - key: GEMINI_VIDEO_MODEL
+        value: veo-3.1-fast-generate-preview

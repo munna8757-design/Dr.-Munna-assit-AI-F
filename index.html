@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="bn" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Dr. Munna Assist AI</title>
+    <meta name="description" content="Cross-framework React rewrite of Dr. Munna Assist AI with 3D virtual assistant, Bengali voice chat, health education, AI studio, and mobile tools." />
+    <meta property="og:title" content="Dr. Munna Assist AI" />
+    <meta property="og:description" content="Cross-framework React rewrite of Dr. Munna Assist AI with 3D virtual assistant, Bengali voice chat, health education, AI studio, and mobile tools." />
+    
+    <!-- PWA & Mobile WebAPK Meta Tags -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#0b1020" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="icon" type="image/png" href="./icon-192.png" />
+    <link rel="apple-touch-icon" href="./icon-192.png" />
+
+    <style>
+      body {
+        margin: 0;
+        background-color: #0b1020;
+        color: #ffffff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        overflow-x: hidden;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-BNXy-dEW.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BArsTgqb.css">
+  </head>
+  <body class="bg-[#0b1020] text-white selection:bg-[#61e7f5] selection:text-black min-h-screen">
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch((err) => {
+            console.warn('Service worker registration:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
